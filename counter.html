@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      align-items: center;
+    }
+
+    .counter {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-size: 14px;
+      padding: 10px 20px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="center">
+          <h1>Counter App</h1>
+          <div class="counter">0</div>
+          <button id="addButton">decrement by 1</button>
+          <button id="subtractButton">increment by one</button>
+          <button id="resetButton">Reset</button>
+  </div>
+
+  <script>
+    // Get the counter element
+    var counterElement = document.querySelector('.counter');
+
+    // Get the buttons
+    var addButton = document.getElementById('addButton');
+    var subtractButton = document.getElementById('subtractButton');
+    var resetButton = document.getElementById('resetButton');
+
+    // Counter variable
+    var counter = 0;
+
+    // Add event listener for the add button
+    addButton.addEventListener('click', function() {
+      counter++;
+      counterElement.textContent = counter;
+    });
+
+    // Add event listener for the subtract button
+    subtractButton.addEventListener('click', function() {
+      counter--;
+      counterElement.textContent = counter;
+    });
+
+    // Add event listener for the reset button
+    resetButton.addEventListener('click', function() {
+      counter = 0;
+      counterElement.textContent = counter;
+    });
+  </script>
+</body>
+</html> 
+
+
